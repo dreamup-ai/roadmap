@@ -12,6 +12,7 @@ This is a public repo for managing the engineering roadmap for dreamup.ai's open
 - Fully utilize available VRAM: Load multiple models per GPU worker if VRAM allows
 - Support login via any OAuth2 provider
 - Support 3rd party integrations
+- Use agnostic standards like OpenAPI, JSON Schema,Terraform, Docker Compose
 
 ## Architecture
 

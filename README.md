@@ -24,7 +24,7 @@ Dreamup.ai, a project by the Foundation for Technology in the Arts, is a small t
 - Cloud-agnostic: let users follow the lowest gpu prices easily
 - Can be run locally: Users should be able to run the full stack locally, provided they have adequate hardware
 - Support an arbitrary number of models and pipelines
-- Fully utilize available VRAM: Load multiple models per GPU worker if VRAM allows
+- Fully utilize available GPU resources: Binpack models into available vram, minimize idle time
 - Support login via any OAuth2 provider
 - Support 3rd party integrations
 - Use technology-agnostic standards like OpenAPI, JSON Schema,Terraform, Docker Compose

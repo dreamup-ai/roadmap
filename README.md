@@ -41,6 +41,15 @@ Dreamup.ai, a project by the Foundation for Technology in the Arts, is a small t
 
 ![Architecture Diagram](images/Dreamup%20v2%20architecture.png)
 
+### Hey, this isn't cloud agnostic!
+
+Good eye! You've noticed some AWS specific services in the architecture diagram. In it's current form, DreamUp runs predominantly on AWS, and partially on [Salad](https://salad.com/). Additionally, our current team is overwhelmingly more experienced in AWS than in other clouds. There are several factors that mitigate tight coupling with AWS in this design:
+
+- We wrap SQS in a typescript interface that abstracts its functionalities. It is simple to build queue "plugins" for other queueing services, such as RabbitMQ, that comply with this interface.
+- We're using DynamoDB because it's fast, cheap, and very simple to operate and scale. However, none of the data storage and retrieval requirements of the platform are particularly complex, and swapping out the database is not a terribly complicated operation. The intention is to release variants of the API services that are intended for various database backends. i.e. One that supports DynamoDB, one that supports MongoDB, one that supports Postgres, etc. The priority of this development will be driven by community engagement.
+- We're using S3 because we're already in AWS, but any s3-compatible bucket storage could be used out of the box. S3 interactions are constrained to the image service, which also will simplify releasing versions that support other bucket storage vendors.
+- We're using Elastic File System (EFS) becaue we're already in AWS, but it is mounted to inference containers as normal network-attached storage, which is available from a variety of vendors, and not particularly complicated to set up on-premise either.
+
 ## License
 
 All of our code is released under the MIT license, available per-repo. Some dependencies may have other permissive licenses such as Apache. Components are chosen with commercial use in mind.

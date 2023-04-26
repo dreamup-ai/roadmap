@@ -27,7 +27,7 @@ Dreamup.ai, a project by the Foundation for Technology in the Arts, is a small t
 - Fully utilize available VRAM: Load multiple models per GPU worker if VRAM allows
 - Support login via any OAuth2 provider
 - Support 3rd party integrations
-- Use agnostic standards like OpenAPI, JSON Schema,Terraform, Docker Compose
+- Use technology-agnostic standards like OpenAPI, JSON Schema,Terraform, Docker Compose
 
 ## UI component design goals
 

@@ -21,6 +21,7 @@ Dreamup.ai, a project by the Foundation for Technology in the Arts, is a small t
 ## Platform Design goals
 
 - Arbitrarily scalable: should work for small and large services alike
+- optional scale-to-zero: save money by scaling infrequently used models down to 0 when they arent being used
 - Cloud-agnostic: let users follow the lowest gpu prices easily
 - Can be run locally: Users should be able to run the full stack locally, provided they have adequate hardware
 - Support an arbitrary number of models and pipelines

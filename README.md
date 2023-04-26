@@ -1,4 +1,4 @@
-# roadmap
+# DreamUp.ai
 This is a public repo for managing the engineering roadmap for dreamup.ai's open source platform release
 
 ## What is it?

@@ -51,6 +51,10 @@ Good eye! You've noticed some AWS specific services in the architecture diagram.
 - We're using S3 because we're already in AWS, but any s3-compatible bucket storage could be used out of the box. S3 interactions are constrained to the image service, which also will simplify releasing versions that support other bucket storage vendors.
 - We're using Elastic File System (EFS) becaue we're already in AWS, but it is mounted to inference containers as normal network-attached storage, which is available from a variety of vendors, and not particularly complicated to set up on-premise either.
 
+## API Services
+
+![service model](images/Dreamup%20Service%20Model.png)
+
 ## License
 
 All of our code is released under the MIT license, available per-repo. Some dependencies may have other permissive licenses such as Apache. Components are chosen with commercial use in mind.

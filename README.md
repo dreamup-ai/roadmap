@@ -55,6 +55,15 @@ Good eye! You've noticed some AWS specific services in the architecture diagram.
 
 ![service model](images/Dreamup%20Service%20Model.png)
 
+- [User Service](https://github.com/dreamup-ai/user-service)
+- [Pipeline Service](https://github.com/dreamup-ai/pipeline-service)
+
+### Auth Paradigm
+
+- **server-to-server** communication is done via signed payloads with public-key cryptography. When one dreamup service communicates with another, it creates a signature of the payload using a private key, and includes that signature in a header. The receiving service uses a public key to verify the signature matches the payload and comes from an internal service.
+
+- **user-to-service** communication is done via a jwt session, either in a cookie or a bearer token, that is signed with a private key, and validated with a public key. Only the **user service** issues sessions, and also hosts the public key at `/.well-known/session-jwks.json`, so any other service may verify the sessions.
+
 ## License
 
 All of our code is released under the MIT license, available per-repo. Some dependencies may have other permissive licenses such as Apache. Components are chosen with commercial use in mind.

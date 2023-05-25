@@ -58,7 +58,7 @@ Good eye! You've noticed some AWS specific services in the architecture diagram.
 - [User Service](https://github.com/dreamup-ai/user-service)
 - [Pipeline Service](https://github.com/dreamup-ai/pipeline-service)
 - Model Service (Coming Soon)
-- Image Service (Coming Soon)
+- [Image Service](https://github.com/dreamup-ai/image-service)
 - Job Service (Coming Soon)
 - Moderation Service (Coming soon)
 
